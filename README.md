@@ -9,7 +9,6 @@ This project implements a skill embedding model designed for multi-label scenari
 - [Model Architecture](#model-architecture)
 - [Training Strategy](#training-strategy)
 - [Evaluation Metrics](#evaluation-metrics)
-- [Innovations and Advantages](#innovations-and-advantages)
 - [License](#license)
 
 ## Overview
