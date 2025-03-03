@@ -93,23 +93,6 @@ The proposed model is a dual-encoder (BiEncoder) that consists of the following 
   - For each validation sample, cosine similarity between its embedding and all skill embeddings is computed.
   - The skills are ranked according to similarity, and MRR and RP@5 are calculated based on the position of the correct skill.
 
-## Innovations and Advantages
-
-- **Multi-Label Handling**  
-  Each data instance contains two positive skill IDs, and the model is simultaneously optimized for both. This multi-label approach is better suited for complex real-world applications compared to single-label methods.
-
-- **Contrastive Loss Design**  
-  The use of a contrastive loss function effectively brings embeddings of similar skills closer while pushing apart those of different skills. This design addresses challenges related to multi-label data and class imbalance.
-
-- **Enhanced Contextual Understanding**  
-  Integrating BiLSTM and an attention mechanism on top of a pre-trained BERT model significantly improves the model's ability to capture contextual nuances and generate high-quality embeddings.
-
-- **Robust Negative Sampling Strategy**  
-  Multiple negative samples are generated for each positive instance by randomly sampling non-matching skills. This increases training difficulty and improves the model's robustness in distinguishing between different skills.
-
-- **Dual-Encoder Framework**  
-  The dual-encoder architecture leverages a strong pre-trained language model to encode text, ensuring that the skill embeddings are both accurate and semantically rich.
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
